@@ -1,0 +1,2 @@
+# Machine-Learning-for-Automated-Historical-Record-Transcription-on-Edge-Devices
+In French and Belgian records from the 1790s to the 1920s, the scribes who recorded this history made indices of 10-year tables with abstracts of the names and information of records contained within. These mostly are left untranscribed and would allow researchers to save significant amounts of time if these were searchable.
