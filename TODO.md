@@ -1,7 +1,7 @@
 ### To Do List
 - [ ] Obtain data in the model
 - [ ] Use default model format to create model
-- [ ] Train model on CFRAMUZ
+- [ ] Train model on handwritten names
 - [ ] Make line segmentation specific to tables decennales
     - [ ] Make a dataset of segmented lines for tables (Several Books)
     - [ ] Split into validation and training (& transfer) sets
