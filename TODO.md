@@ -12,7 +12,7 @@
         - [ ] Move all other train images to train a new dir
         - [ ] Move all other test images to train a new dir
         - [ ] Move all other valid images to train a new dir
-    -[ ] Name new modified dataset
+    - [ ] Name new modified dataset
 - [ ] Obtain data in the model
 - [ ] Use default model format to create model
 - [ ] Train model on handwritten names
