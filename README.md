@@ -6,3 +6,5 @@ Most of these indices remain untranscribed, locked in handwritten form, making i
 The MLAHRTED project aims to address this by leveraging machine learning to automate transcription on edge devices. This approach uses decentralized technology, enabling document processing without constant server connectivity. Advanced models recognize diverse handwriting styles, converting them into machine-readable text. By deploying on edge devices, the project facilitates transcription even with limited internet, promoting broader access to historical research.
 
 MLAHRTED aims to preserve these documents and democratize access, making it easier for researchers and enthusiasts to explore the rich history within. By transforming handwritten abstracts into searchable data, the project saves time and effort, opening new possibilities for historical discovery.
+
+![My Image](./alliance_detailed_pixelated.png)
