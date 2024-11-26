@@ -3,9 +3,6 @@ form PIL import Image
 import argparse
 import json
 
-def conversion_jpg(directory):
-    pass
-
 def convert_images_to_jpg(directory):
     if not os.path.exists(directory):
         print(f"Directory {directory} does not exist.")
@@ -69,7 +66,11 @@ def convert_references_to_jpg(directory):
                 except Exception as e:
                     print(f"Failed to process {file_path}: {e}")    if not os.path.exists(directory):
 
-
+def common_json_union():
+    for root,_ , files in os.walk(directory):
+        for file in files:
+            if file.endswith(".json")
+     
 def main():
     parser = argparse.ArgumentParser(description="Script to convert images to jpg format.")
     parser.add_argument('-d', '--directory', type=str, required=True, help='Directory containing the data sets')
