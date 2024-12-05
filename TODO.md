@@ -3,11 +3,11 @@
     - [X] Convert all images from .tif and .png to .jpg
     - [X] Change all of the image references from .tif and .png to .jpg
     - [X] Prepend Generic/Belleville names to the imagefile names and also all references to the images
-    - [ ] Make new .json
-        - [ ] Make a union of all json char_sets
-        - [ ] Add new train to json with all images from other jsons
-        - [ ] Add new test to json with all images from other jsons
-        - [ ] Add new valid to json with all images from other jsons
+    - [X] Make new .json
+        - [X] Make a union of all json char_sets
+        - [X] Add new train to json with all images from other jsons
+        - [X] Add new test to json with all images from other jsons
+        - [X] Add new valid to json with all images from other jsons
     - [ ] Make new images dir
         - [ ] Move all other train images to train a new dir
         - [ ] Move all other test images to train a new dir
