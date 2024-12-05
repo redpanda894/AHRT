@@ -36,58 +36,6 @@ def convert_images_to_jpg(directory, output_directory):
                     print(f"Failed to convert {file}: {e}")
 
 
-import os
-import json
-import shutil
-
-def convert_references_to_jpg(directory, output_directory):
-    if not os.path.exists(directory):
-        print(f"Directory {directory} does not exist.")
-        return
-
-    for root, _, files in os.walk(directory):
-        for file in files:
-            if file.endswith(".json"):
-                file_path = os.path.join(root, file)
-                try:
-                    # Determine the top-level directory name
-                    relative_path = os.path.relpath(root, directory)
-                    top_level_dir = relative_path.split(os.sep)[0] if os.sep in relative_path else relative_path
-                    
-                    with open(file_path, "r", encoding="utf-8") as f:
-                        data = json.load(f)
-                        ground_truth = data.get("ground_truth", {})
-                        
-                        # Process each dataset type in "ground_truth"
-                        for dataset_type in ["train", "valid", "test"]:
-                            if dataset_type in ground_truth:
-                                images = ground_truth[dataset_type]
-                                updated_images = {}
-                                
-                                # Change file extensions to .jpg and prepend the top-level directory
-                                for image_name, text_data in images.items():
-                                    new_image_name = f"{top_level_dir}_{image_name.replace('.png', '.jpg').replace('.tif', '.jpg')}"
-                                    updated_images[new_image_name] = text_data
-                                
-                                # Update the ground_truth dataset
-                                ground_truth[dataset_type] = updated_images
-                    
-                    # Write the updated JSON back to a new file called altered_labels.json in the same directory
-                    altered_file_path = os.path.join(root, "altered_labels.json")
-                    with open(altered_file_path, "w", encoding="utf-8") as f:
-                        json.dump(data, f, indent=4, ensure_ascii=False)
-                        print(f"Created altered JSON file: {altered_file_path}")
-                    
-                    # Copy the altered JSON file to the output directory with the same relative path
-                    output_subdir = os.path.join(output_directory, os.path.relpath(root, directory))
-                    if not os.path.exists(output_subdir):
-                        os.makedirs(output_subdir)
-                    shutil.copy(altered_file_path, os.path.join(output_subdir, "altered_labels.json"))
-                    print(f"Copied altered JSON file to: {os.path.join(output_subdir, 'altered_labels.json')}")
-                
-                except Exception as e:
-                    print(f"Failed to process {file_path}: {e}")
-
 def convert_references_to_jpg(directory, output_directory):
     if not os.path.exists(directory):
         print(f"Directory {directory} does not exist.")
