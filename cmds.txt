@@ -1,2 +1,0 @@
-python3 combine_dataset.py -d ./data_sets/popp/data/ -o ./data_sets/corrected_set
-python3 combine_dataset.py -d ./data_sets/corrected_set -o ./data_sets/corrected_set -u -of ./data_sets/corrected_set/union_file.json
