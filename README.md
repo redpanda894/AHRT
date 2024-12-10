@@ -19,7 +19,7 @@ This project leverages transfer learning and custom datasets to enhance existing
 - Validation loss (lowest): **2.26**
 - Significant improvement in transcription accuracy compared to general-purpose OCR tools.
 
-For more details, see the [paper](link_to_paper).
+For more details, see the [paper](./dated_related/'Machine Learning for Automated Historical Record Transcription on Edge Devices.pdf').
 
 ## Setup
 
