@@ -1,10 +1,66 @@
-# Automated-Historical-Record-Transciber (AHRT)
-From the late 18th century to the early 20th century, French and Belgian historical records were meticulously documented by scribes. These records, spanning from the 1790s to the 1920s, contain invaluable information about individuals and events, forming a vital resource for genealogists, historians, and researchers interested in societal changes over time. Among these records are 10-year tables—summarized indices compiled at decade intervals, containing abstracts of names and key details from various documents, such as birth, marriage, and death records.
+# Automated Historical Record Transcription (AHRT)
 
-Most of these indices remain untranscribed, locked in handwritten form, making it challenging for researchers to manually sift through countless pages. Transcribing and making these indices searchable would greatly enhance access, allowing researchers to efficiently trace lineages, study demographics, and analyze social changes.
+AHRT is a machine learning-based tool designed to automate the transcription of historical "ten-year tables" (tables décennales, tienjarige tafels) from 19th and early 20th century France and Belgium. The project aims to reduce transcription labor for genealogists, archivists, and researchers by creating an efficient and accessible method for indexing names, dates, and event types in historical records.
 
-The MLAHRTED project aims to address this by leveraging machine learning to automate transcription on edge devices. This approach uses decentralized technology, enabling document processing without constant server connectivity. Advanced models recognize diverse handwriting styles, converting them into machine-readable text. By deploying on edge devices, the project facilitates transcription even with limited internet, promoting broader access to historical research.
+## Features
+- **Optical Character Recognition (OCR):** Specialized model tailored for French and Belgian handwriting styles (Écriture Anglaise).
+- **Image Segmentation:** Automated preprocessing and segmentation for various handwritten and printed formats.
+- **Transfer Learning:** Adapted model to recognize regional and linguistic variations in historical records.
+- **Edge Device Implementation:** (In Progress) Deployment on a Xilinx KRIA KV-260 board for accessible use in archives.
+- **Searchable Databases:** Direct pipeline for generating organized CSV files from historical index entries.
 
-MLAHRTED aims to preserve these documents and democratize access, making it easier for researchers and enthusiasts to explore the rich history within. By transforming handwritten abstracts into searchable data, the project saves time and effort, opening new possibilities for historical discovery.
+## Background
+Historical records are often inaccessible due to their handwritten nature and regional variations. By focusing on indices of names and events, AHRT enables faster data retrieval, especially for genealogical and sociological research.
 
-![My Image](./logo.png)
+This project leverages transfer learning and custom datasets to enhance existing OCR capabilities, particularly for Francophonic records. Our model outperforms baseline models and general-purpose OCRs in recognizing antiquated handwriting styles and specialized content.
+
+## Results
+- Training loss: **0.3607**
+- Validation loss (lowest): **2.26**
+- Significant improvement in transcription accuracy compared to general-purpose OCR tools.
+
+For more details, see the [paper](link_to_paper).
+
+## Setup
+
+### Prerequisites
+- Python 3.9 or higher
+- TensorFlow or PyTorch (specify version)
+- OpenCV
+- NumPy, Pandas, and other dependencies
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo/ahrt.git
+   cd ahrt
+   ```
+
+### Dataset
+The training dataset includes segmented and labeled examples of ten-year tables from seven regions in France and Belgium. To use the model with your data:
+1. Format your data as grayscale images with clear segmentation.
+2. Update the dataset in `data.json`.
+
+## Contributing
+Contributions are welcome! To contribute:
+1. Fork the repository.
+2. Create a feature branch (`git checkout -b feature-branch`).
+3. Commit changes (`git commit -m 'Add feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Open a pull request.
+
+## Future Work
+- Complete the deployment on edge devices (KRIA KV-260).
+- Expand datasets to include other regions and languages.
+- Improve segmentation algorithms for higher accuracy.
+
+## License
+This project is licensed under the [MIT License](LICENSE).
+
+## Contact
+For questions or feedback, contact:
+- Kai Brennan (kai.j.brennan@gmail.com)
+- Paul Brotelande (pbrotelande@gmail.com)
+
+
+![My Image](./dated_related/logo.png)
