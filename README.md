@@ -1,5 +1,4 @@
 # Automated Historical Record Transcription (AHRT)
-
 AHRT is a machine learning-based tool designed to automate the transcription of historical "ten-year tables" (tables décennales, tienjarige tafels) from 19th and early 20th century France and Belgium. The project aims to reduce transcription labor for genealogists, archivists, and researchers by creating an efficient and accessible method for indexing names, dates, and event types in historical records.
 
 ## Features
@@ -19,7 +18,7 @@ This project leverages transfer learning and custom datasets to enhance existing
 - Validation loss (lowest): **2.26**
 - Significant improvement in transcription accuracy compared to general-purpose OCR tools.
 
-For more details, see the [paper](./dated_related/'Machine Learning for Automated Historical Record Transcription on Edge Devices.pdf').
+For more details, see the [paper](./dated_related/'Machine_Learning_for_Automated_Historical_Record_Transcription_on_Edge_Devices.pdf').
 
 ## Setup
 
